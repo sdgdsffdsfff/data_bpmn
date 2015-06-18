@@ -1,0 +1,8 @@
+bpmn/.project
+common/.settings/*
+common/.project
+common/.classpath
+bpmn/bpmn-context/.settings/*
+bpmn/bpmn-context/.project
+bpmn/bpmn-context/.classpath
+bpmn/.settings/org.eclipse.m2e.core.prefs
