@@ -11,17 +11,20 @@
 	<dubbo:application name="changhong_data_bpmn" />
 
 	<dubbo:registry address="multicast://224.255.255.254:1234?unicast=false" />
-	
-	<!-- 指定服务端口为15000，并供应粘滞 sticky="true"-->
+
+	<!-- 指定服务端口为15000，并供应粘滞 sticky="true" -->
 	<dubbo:protocol name="dubbo" port="15000" />
 	<dubbo:provider proxy="jdk" />
-	
-	<!-- dubbo 服务扫描 -->
-	<dubbo:annotation package="com.changhong" />
 
-	<!-- spring 注册服务，排除通过 -->
+	<!-- dubbo 服务扫描  -->
+	<dubbo:annotation package="com.changhong" />
+	
+	<!-- spring 注册服务，排除通过
 	<context:component-scan base-package="com.changhong">
-		<context:include-filter type="annotation"
+		<context:exclude-filter type="annotation"
 			expression="com.alibaba.dubbo.config.annotation.Service" />
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
+ -->
 </beans>
